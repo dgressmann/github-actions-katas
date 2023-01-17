@@ -6,9 +6,14 @@
 #################################
 name: Lint Code Base
 
-#############################
-# Start the job on all push #
-#############################
+permissions:
+  contents: read
+
+on:
+  push:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 jobs:
   build:
     # Name the Job
